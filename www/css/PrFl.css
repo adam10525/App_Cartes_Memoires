@@ -22,7 +22,7 @@ body {
 }
 
 
-.card:hover {
+.card:focus {
   transform: rotateY(180deg);
 }
 
