@@ -16,37 +16,31 @@
 	<script>
 
 		var cartechoisie = 1;
-		var runtimes = 0;
+		var QuesRep = 0;
 
 		function ChangeImage(){
-		var cartecoteQ = document.getElementById("CarteQ");
-		var cartecoteR = document.getElementById("CarteR");
-		cartechoisie = Math.floor(Math.random() * 6) + 1;
+		var carte = document.getElementById("Carte");
 
-		if(runtimes % 2 == 0){
-			cartecoteQ.src = "Images/" + "Q0" + cartechoisie + ".png";
-			cartecoteR.src = "Images/" + "R0" + cartechoisie + ".png";
+		if(QuesRep == 1){
+			carte.src = "Images/" + "R0" + cartechoisie + ".png";
+			cartechoisie = Math.floor(Math.random() * 6) + 1;
+			QuesRep = 1;
 		}
+
 		else{
-			cartecoteQ.src = "Images/" + "R0" + cartechoisie + ".png";
-			cartecoteR.src = "Images/" + "Q0" + cartechoisie + ".png";
+			carte.src = "Images/" + "Q0" + cartechoisie + ".png";
+			QuesRep = 0;
 		}
-		runtimes += 1;
 
 	}
 
 	</script>
 </head>
 <body>
-	<!--<div class="boite" >
+	<div class="boite" >
 		<img id="Carte" width="395" height="520" onclick="ChangeImage()" src="Images/Q01.png"/>
-	</div>-->
-	<div class="card-container">
-		<div class="card">
-			<div class="side"><img id="CarteQ" width="395" height="520" src="Images/Q01.png" onclick="ChangeImage()"></div>
-			<div class="side back"><img id="CarteR" width="395" height="520" src="Images/R01.png" onclick="ChangeImage()"></div>
-		</div>
 	</div>
+
 	<!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
