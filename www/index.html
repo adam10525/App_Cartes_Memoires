@@ -16,7 +16,7 @@
 	<script>
 
 		var cartechoisie = 1;
-		var QuesRep = 0;
+		var QuesRep = 1;
 
 		function ChangeImage(){
 		var carte = document.getElementById("Carte");
@@ -24,12 +24,12 @@
 		if(QuesRep == 1){
 			carte.src = "Images/" + "R0" + cartechoisie + ".png";
 			cartechoisie = Math.floor(Math.random() * 6) + 1;
-			QuesRep = 1;
+			QuesRep = 0;
 		}
 
 		else{
 			carte.src = "Images/" + "Q0" + cartechoisie + ".png";
-			QuesRep = 0;
+			QuesRep = 1;
 		}
 
 	}
